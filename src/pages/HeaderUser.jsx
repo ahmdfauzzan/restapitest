@@ -22,7 +22,7 @@ export const HeaderUser = () => {
       navigate("/"); // Redirect jika tidak ada token
     } else {
       axios
-        .get("https://reqres.in/api/users/2", {
+        .get("https://reqres.in/api/users/4", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => setUser(response.data.data))
@@ -61,8 +61,11 @@ export const HeaderUser = () => {
               <div className="px-4 py-2 text-sm text-gray-600">
                 {user.email}
               </div>
-              <Link to="/profil" className="block px-4 py-2 hover:bg-gray-100">
+              <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">
                 Profil
+              </Link>
+              <Link to="/transaksi" className="block px-4 py-2 hover:bg-gray-100">
+                Transaksi
               </Link>
               <button
                 onClick={handleLogout}
