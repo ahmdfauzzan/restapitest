@@ -17,13 +17,15 @@ const Login = () => {
 
   return (
     <div className="flex h-screen flex-col md:flex-row">
-      {/* Bagian kiri (gambar) */}
-      <div className="hidden md:flex w-full md:w-3/5 h-full bg-gradient-to-b from-slate-900 via-primary to-slate-900">
-        <img
-          src={foto}
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
+      {/* Bagian kiri (gambar + teks) */}
+      <div className="hidden md:flex w-full md:w-3/5 h-full bg-gradient-to-b from-[#0575E6] via-[#02298A] to-[#021B79]">
+        <div className="flex flex-col justify-center items-start text-white text-left px-16 space-y-4 ml-10">
+          <h1 className="text-4xl font-bold">GoFinance</h1>
+          <p className="text-lg">Lorem ipsum dolor sit amet</p>
+          <button className="bg-blue-500 px-6 py-3 rounded-full text-white text-lg hover:bg-blue-600 transition">
+            Read More
+          </button>
+        </div>
       </div>
 
       {/* Bagian kanan (form login) */}
